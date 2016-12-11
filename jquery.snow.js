@@ -29,6 +29,7 @@
 									maxSize		: 20,
 									newOn		: 500,
 									flakeColor	: ["#ffffff"],
+									flakeZindex	: 9999,
 									durationMillis: null
 								},
 				options			= $.extend({}, defaults, options);
@@ -50,7 +51,8 @@
 							left: startPositionLeft,
 							opacity: startOpacity,
 							'font-size': sizeFlake,
-							color: options.flakeColor[Math.floor((Math.random() * options.flakeColor.length))]
+							color: options.flakeColor[Math.floor((Math.random() * options.flakeColor.length))],
+							'z-index': options.flakeZindex
 						}
 					)
 					.animate(
